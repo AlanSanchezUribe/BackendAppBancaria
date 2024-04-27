@@ -12,13 +12,13 @@ public class App {
         int opcionMenu = 0;
 
         System.out.println("***********************");
-        System.out.println("Nombre de Cliente: " + cliente);
+        System.out.println("\nNombre de Cliente: " + cliente);
         System.out.println("Tipo de Cuenta: " + tipoCuenta);
         System.out.println("Saldo: " + saldo);
-        System.out.println("***********************");
+        System.out.println("\n***********************");
 
         
-        System.out.println("** Menu de Opciones **");
+        System.out.println("\n** Menu de Opciones **");
         
         System.out.println("1. Consultar Saldo");
         System.out.println("2. Retirar");
@@ -47,7 +47,11 @@ public class App {
             Double deposito = montoDeposito.nextDouble();
             saldo = saldo + deposito;
             System.out.println("Tu nuevo saldo es: " + saldo + " $");
-        } else {
+        } else if (opcionMenu == 9) {
+            
+            System.out.println("Su sesion ha finalizado con exito");
+            break;
+        }else {
             System.out.println("Por favor, elige una de las opciones disponibles");
         }
         
@@ -58,7 +62,7 @@ public class App {
         System.out.println("9. Salir");
 
          if (opcionMenu == 9) {
-            System.out.println("Su sesion ha finalizado con exito");
+            
         } 
     }
     
